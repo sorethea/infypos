@@ -419,3 +419,9 @@ Route::get('front-setting', [SettingAPIController::class, 'getFrontSettingsValue
 Route::post('validate-auth-token', [AuthController::class, 'isValidToken']);
 
 require __DIR__ . '/m1.php';
+
+
+
+
+Route::resource('branches', App\Http\Controllers\API\BranchAPIController::class)
+    ->except(['create', 'edit']);

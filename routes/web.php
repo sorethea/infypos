@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 include 'upgrade.php';
+

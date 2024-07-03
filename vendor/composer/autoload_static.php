@@ -474,8 +474,8 @@ class ComposerStaticInit7fffbc345bfe6f2e1a041843c5c008dd
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -851,6 +851,7 @@ class ComposerStaticInit7fffbc345bfe6f2e1a041843c5c008dd
         'App\\Http\\Controllers\\API\\AdjustmentAPIController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/AdjustmentAPIController.php',
         'App\\Http\\Controllers\\API\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/AuthController.php',
         'App\\Http\\Controllers\\API\\BaseUnitAPIController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/BaseUnitAPIController.php',
+        'App\\Http\\Controllers\\API\\BranchAPIController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/BranchAPIController.php',
         'App\\Http\\Controllers\\API\\BrandAPIController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/BrandAPIController.php',
         'App\\Http\\Controllers\\API\\CouponCodeAPIController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/CouponCodeAPIController.php',
         'App\\Http\\Controllers\\API\\CurrencyAPIController' => __DIR__ . '/../..' . '/app/Http/Controllers/API/CurrencyAPIController.php',
@@ -907,6 +908,8 @@ class ComposerStaticInit7fffbc345bfe6f2e1a041843c5c008dd
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\API\\CreateBranchAPIRequest' => __DIR__ . '/../..' . '/app/Http/Requests/API/CreateBranchAPIRequest.php',
+        'App\\Http\\Requests\\API\\UpdateBranchAPIRequest' => __DIR__ . '/../..' . '/app/Http/Requests/API/UpdateBranchAPIRequest.php',
         'App\\Http\\Requests\\AuthRequest' => __DIR__ . '/../..' . '/app/Http/Requests/AuthRequest.php',
         'App\\Http\\Requests\\CraeteAdjustmentRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CraeteAdjustmentRequest.php',
         'App\\Http\\Requests\\CreateBaseUnitRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CreateBaseUnitRequest.php',
@@ -1040,6 +1043,7 @@ class ComposerStaticInit7fffbc345bfe6f2e1a041843c5c008dd
         'App\\Models\\AdjustmentItem' => __DIR__ . '/../..' . '/app/Models/AdjustmentItem.php',
         'App\\Models\\BaseModel' => __DIR__ . '/../..' . '/app/Models/BaseModel.php',
         'App\\Models\\BaseUnit' => __DIR__ . '/../..' . '/app/Models/BaseUnit.php',
+        'App\\Models\\Branch' => __DIR__ . '/../..' . '/app/Models/Branch.php',
         'App\\Models\\Brand' => __DIR__ . '/../..' . '/app/Models/Brand.php',
         'App\\Models\\Contracts\\JsonResourceful' => __DIR__ . '/../..' . '/app/Models/Contracts/JsonResourceful.php',
         'App\\Models\\Country' => __DIR__ . '/../..' . '/app/Models/Country.php',
@@ -1092,6 +1096,7 @@ class ComposerStaticInit7fffbc345bfe6f2e1a041843c5c008dd
         'App\\Repositories\\AdjustmentRepository' => __DIR__ . '/../..' . '/app/Repositories/AdjustmentRepository.php',
         'App\\Repositories\\BaseRepository' => __DIR__ . '/../..' . '/app/Repositories/BaseRepository.php',
         'App\\Repositories\\BaseUnitRepository' => __DIR__ . '/../..' . '/app/Repositories/BaseUnitRepository.php',
+        'App\\Repositories\\BranchRepository' => __DIR__ . '/../..' . '/app/Repositories/BranchRepository.php',
         'App\\Repositories\\BrandRepository' => __DIR__ . '/../..' . '/app/Repositories/BrandRepository.php',
         'App\\Repositories\\CouponCodeRepository' => __DIR__ . '/../..' . '/app/Repositories/CouponCodeRepository.php',
         'App\\Repositories\\Criteria\\JSONApiFilterCriteria' => __DIR__ . '/../..' . '/app/Repositories/Criteria/JSONApiFilterCriteria.php',

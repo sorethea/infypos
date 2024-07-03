@@ -62,7 +62,7 @@ class AuthController extends AppBaseController
         $password = $request->get('password');
 
         if (empty($email) or empty($password)) {
-            return $this->sendError('username and password required', 422);
+            return $this->sendError('email and password required', 422);
         }
         $user = User::whereRaw('lower(email) = ?', [$email])->first();
 
