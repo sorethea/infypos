@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Branch extends BaseModel implements HasMedia, JsonResourceful
 {
@@ -17,6 +18,8 @@ class Branch extends BaseModel implements HasMedia, JsonResourceful
     public $table = 'branches';
 
     const JSON_API_TYPE = 'branches';
+
+    public const PATH = 'branch_image';
 
     public $fillable = [
         'name',
@@ -40,38 +43,43 @@ class Branch extends BaseModel implements HasMedia, JsonResourceful
     ];
 
 
-    public function getResourceType()
+    public function getImageUrlAttribute(): string
     {
-        // TODO: Implement getResourceType() method.
+        /** @var Media $media */
+        $media = $this->getMedia(Branch::PATH)->first();
+        if (! empty($media)) {
+            return $media->getFullUrl();
+        }
+
+        return '';
     }
 
-    public function prepareData()
+
+    public function prepareAttributes(): array
     {
-        // TODO: Implement prepareData() method.
+        $fields = [
+            'name' => $this->name,
+            'description' => $this->description,
+            'image' => $this->image_url,
+        ];
+
+        return $fields;
     }
 
-    public function prepareIncluded()
+    public function prepareBranches(): array
     {
-        // TODO: Implement prepareIncluded() method.
+        $fields = [
+            'id' => $this->id,
+            'name' => $this->name,
+        ];
+
+        return $fields;
     }
 
     public function prepareLinks()
     {
-        // TODO: Implement prepareLinks() method.
-    }
-
-    public function prepareAttributes()
-    {
-        // TODO: Implement prepareAttributes() method.
-    }
-
-    public function asJsonResource()
-    {
-        // TODO: Implement asJsonResource() method.
-    }
-
-    public function asJsonResourceWithRelationships()
-    {
-        // TODO: Implement asJsonResourceWithRelationships() method.
+        return [
+            'self' => route('branches.show', $this->id),
+        ];
     }
 }
