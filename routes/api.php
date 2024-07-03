@@ -403,6 +403,10 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Coupon Code Routes
     Route::resource('coupon-codes', CouponCodeAPIController::class);
+
+
+    Route::resource('branches', App\Http\Controllers\API\BranchAPIController::class)
+        ->except(['create', 'edit']);
 });
 
 Route::post('login', [AuthController::class, 'login'])->name('login');
@@ -422,6 +426,3 @@ require __DIR__ . '/m1.php';
 
 
 
-
-Route::resource('branches', App\Http\Controllers\API\BranchAPIController::class)
-    ->except(['create', 'edit']);
