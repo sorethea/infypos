@@ -43,6 +43,8 @@ class Branch extends BaseModel implements HasMedia, JsonResourceful
     ];
 
 
+    protected $appends = ['image_url'];
+
     public function getImageUrlAttribute(): string
     {
         /** @var Media $media */
