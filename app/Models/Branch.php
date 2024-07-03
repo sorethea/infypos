@@ -3,10 +3,16 @@
 namespace App\Models;
 
 use App\Models\Contracts\JsonResourceful;
+use App\Traits\HasJsonResourcefulData;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Branch extends BaseModel implements JsonResourceful
+class Branch extends BaseModel implements HasMedia, JsonResourceful
 {
+
+    use HasFactory, InteractsWithMedia, HasJsonResourcefulData;
     public $table = 'branches';
 
     public $fillable = [
