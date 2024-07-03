@@ -13,7 +13,10 @@ class Branch extends BaseModel implements HasMedia, JsonResourceful
 {
 
     use HasFactory, InteractsWithMedia, HasJsonResourcefulData;
+
     public $table = 'branches';
+
+    const JSON_API_TYPE = 'branches';
 
     public $fillable = [
         'name',
