@@ -4,6 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateBranchAPIRequest;
 use App\Http\Requests\API\UpdateBranchAPIRequest;
+use App\Http\Resources\BranchCollection;
+use App\Http\Resources\BranchResource;
 use App\Models\Branch;
 use App\Repositories\BranchRepository;
 use Illuminate\Http\JsonResponse;
@@ -26,7 +28,7 @@ class BranchAPIController extends AppBaseController
      * Display a listing of the Branches.
      * GET|HEAD /branches
      */
-    public function index(Request $request): JsonResponse
+    public function index(Request $request): BranchCollection
     {
         $branches = $this->branchRepository->all(
             $request->except(['skip', 'limit']),
@@ -34,7 +36,9 @@ class BranchAPIController extends AppBaseController
             $request->get('limit')
         );
 
-        return $this->sendResponse($branches->toArray(), 'Branches retrieved successfully');
+        BranchResource::usingWithCollection();
+
+        return new BranchCollection($branches);
     }
 
     /**
