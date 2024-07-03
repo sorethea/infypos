@@ -44,13 +44,14 @@ class BranchAPIController extends AppBaseController
      * Store a newly created Branch in storage.
      * POST /branches
      */
-    public function store(CreateBranchAPIRequest $request): JsonResponse
+    public function store(CreateBranchAPIRequest $request): BranchResource
     {
         $input = $request->all();
 
-        $branch = $this->branchRepository->create($input);
+        $branch = $this->branchRepository->storeBranch($input);
+        BranchResource::usingWithCollection();
 
-        return $this->sendResponse($branch->toArray(), 'Branch saved successfully');
+        return new BranchResource($branch);
     }
 
     /**
