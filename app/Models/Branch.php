@@ -51,6 +51,8 @@ class Branch extends BaseModel implements JsonResourceful
             'name' => $this->name,
             'address' => $this->address,
             'location' => $this->location,
+            'brand_id' => $this->brand_id,
+            'brand_name' => $this->brand->name,
         ];
 
         return $fields;
