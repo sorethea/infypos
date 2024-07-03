@@ -30,7 +30,10 @@ class BranchAPIController extends AppBaseController
      */
     public function index(Request $request): BranchCollection
     {
-        $branches = $this->branchRepository->all();
+
+        $perPage = getPageSize($request);
+
+        $branches = $this->branchRepository->paginate($perPage);
 
         BranchResource::usingWithCollection();
 
