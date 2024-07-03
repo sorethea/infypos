@@ -11,8 +11,19 @@ class BranchRepository extends BaseRepository
         'name',
         'address',
         'location',
-        'description'
+        'created_at',
     ];
+
+    /**
+     * @var string[]
+     */
+    protected $allowedFields = [
+        'name',
+        'address',
+        'location',
+        'description',
+    ];
+
 
     public function getFieldsSearchable(): array
     {
