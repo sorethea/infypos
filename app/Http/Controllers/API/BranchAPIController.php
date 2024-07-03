@@ -30,11 +30,7 @@ class BranchAPIController extends AppBaseController
      */
     public function index(Request $request): BranchCollection
     {
-        $branches = $this->branchRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
+        $branches = $this->branchRepository->all();
 
         BranchResource::usingWithCollection();
 
