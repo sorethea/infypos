@@ -59,8 +59,6 @@ class Branch extends BaseModel implements HasMedia, JsonResourceful
     {
         $fields = [
             'name' => $this->name,
-            'description' => $this->description,
-            'image' => $this->image_url,
         ];
 
         return $fields;
