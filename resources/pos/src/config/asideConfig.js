@@ -62,6 +62,7 @@ export default [
             categoriesSubPath: "/app/product-categories",
             variationsSubPath: "/app/variations",
             brandsSubPath: "/app/brands",
+            branchesSubPath: "/app/branches",
             unitsSubPath: "/app/units",
             baseUnitsSubPath: "/app/base-units",
             barcodeSubPath: "/app/print/barcode",
@@ -100,6 +101,16 @@ export default [
                 path: "/app/create-brand",
                 class: "d-flex",
                 permission: Permissions.MANAGE_BRANDS,
+            },
+
+            {
+                title: "branches.title",
+                name: "branches",
+                fontIcon: <FontAwesomeIcon icon={faBookmark} />,
+                to: "/app/branches",
+                path: "/app/create-branch",
+                class: "d-flex",
+                permission: Permissions.MANAGE_BRANCHES,
             },
             {
                 title: "units.title",
