@@ -96,7 +96,7 @@ export default [
             {
                 title: "brands.title",
                 name: "brands",
-                fontIcon: <FontAwesomeIcon icon={faBookmark} />,
+                fontIcon: <FontAwesomeIcon icon={faBasketShopping} />,
                 to: "/app/brands",
                 path: "/app/create-brand",
                 class: "d-flex",
@@ -106,7 +106,7 @@ export default [
             {
                 title: "branches.title",
                 name: "branches",
-                fontIcon: <FontAwesomeIcon icon={faBookmark} />,
+                fontIcon: <FontAwesomeIcon icon={faBoxes} />,
                 to: "/app/branches",
                 path: "/app/create-branch",
                 class: "d-flex",
