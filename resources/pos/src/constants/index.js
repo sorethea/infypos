@@ -1,5 +1,6 @@
 //API Base URL
 export const apiBaseURL = {
+    BRANCHES: "/branches",
     BRANDS: "/brands",
     CURRENCY: "/currencies",
     REGISTRATION: "/register",
@@ -560,6 +561,7 @@ export const errorMessage = {
 export const Permissions = {
     MANAGE_DASHBOARD: "manage_dashboard",
     MANAGE_ROLES: "manage_roles",
+    MANAGE_BRANCHES: "manage_branches",
     MANAGE_BRANDS: "manage_brands",
     MANAGE_CURRENCY: "manage_currency",
     MANAGE_WAREHOUSES: "manage_warehouses",

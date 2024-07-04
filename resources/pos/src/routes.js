@@ -1,4 +1,5 @@
 import Dashboard from "./components/dashboard/Dashboard";
+import Branches from "./components/branches/Branches";
 import Brands from "./components/brands/Brands";
 import Currencies from "./components/currency/Currencies";
 import Warehouses from "./components/warehouse/Warehouses";
@@ -94,6 +95,11 @@ export const route = [
         path: "dashboard",
         ele: <Dashboard />,
         permission: Permissions.MANAGE_DASHBOARD,
+    },
+    {
+        path: "branches",
+        ele: <Branches />,
+        permission: Permissions.MANAGE_BRANCHES,
     },
     {
         path: "brands",

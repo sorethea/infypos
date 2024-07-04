@@ -829,7 +829,7 @@ INSERT INTO `permissions` (`id`, `name`, `display_name`, `guard_name`, `created_
 (1, 'manage_adjustments', 'Manage Adjustments', 'web', '2024-03-27 08:30:28', '2024-03-27 08:30:28'),
 (2, 'manage_transfers', 'Manage Transfers', 'web', '2024-03-27 08:30:28', '2024-03-27 08:30:28'),
 (3, 'manage_roles', 'Manage Roles', 'web', '2024-03-27 08:30:28', '2024-03-27 08:30:28'),
-(4, 'manage_brands', 'Manage Brands', 'web', '2024-03-27 08:30:28', '2024-03-27 08:30:28'),
+(4, 'manage_brands', 'Manage Branches', 'web', '2024-03-27 08:30:28', '2024-03-27 08:30:28'),
 (5, 'manage_currency', 'Manage Currency', 'web', '2024-03-27 08:30:28', '2024-03-27 08:30:28'),
 (6, 'manage_warehouses', 'Manage Warehouses', 'web', '2024-03-27 08:30:28', '2024-03-27 08:30:28'),
 (7, 'manage_units', 'Manage Units', 'web', '2024-03-27 08:30:28', '2024-03-27 08:30:28'),
